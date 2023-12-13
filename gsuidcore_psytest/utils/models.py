@@ -14,7 +14,7 @@ class Answer(Struct):
 class Question(Struct):
     question: str
     image: str
-    answer: Dict[str, Answer]
+    answer: List[Answer]
 
 
 class Result(Struct):

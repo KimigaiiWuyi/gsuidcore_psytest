@@ -75,9 +75,19 @@ async def send_hot(bot: Bot, ev: Event):
         )
 
 
-@sv_test_start.on_prefix(('开始测试'))
+@sv_test_start.on_command(('开始测试'))
 async def send_test(bot: Bot, ev: Event):
-    test_name = ev.text
+    test_name = ev.text.strip()
+    if not test_name:
+        return await bot.send_option(
+            '\n该功能后面需要接具体的测试项名称噢~\n查看帮助以获得更多信息！',
+            ['热门测试', '全部测试列表', '心理测试帮助'],
+            True,
+            '\n',
+            '【以下命令可用】：',
+            '✅输入: ',
+        )
+
     test = await load_test(test_name)
     if test is None:
         return await bot.send_option(

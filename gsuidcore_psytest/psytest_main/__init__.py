@@ -145,12 +145,17 @@ async def send_test(bot: Bot, ev: Event):
 
                         if _user_answer is None:
                             for index, i in enumerate(answer_map):
-                                if len(user_answer) <= 4 and (
-                                    i in user_answer
-                                    or answer_map[i] in user_answer
-                                ):
-                                    _user_answer = start.answer[index].detail
-                                    break
+                                if len(user_answer) <= 4:
+                                    user_answer = user_answer.upper()
+
+                                    if (
+                                        i in user_answer
+                                        or answer_map[i] in user_answer
+                                    ):
+                                        _user_answer = start.answer[
+                                            index
+                                        ].detail
+                                        break
 
                         if _user_answer is None:
                             _user_percent = 0

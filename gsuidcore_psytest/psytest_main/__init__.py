@@ -63,7 +63,9 @@ async def send_hot(bot: Bot, ev: Event):
     top_six_files = sorted_files[:6]
     top_six_names = [str(x.name) for x in top_six_files]
     if top_six_names == []:
-        await bot.send('目前还没有非常热门的测试噢，请@我输入 全部测试列表 查看完整测试！')
+        await bot.send(
+            '目前还没有非常热门的测试噢，请@我输入 全部测试列表 查看完整测试！'
+        )
     else:
         await bot.send_option(
             '\n下面是非常热门的测试噢！请选择一项吧！',
@@ -123,7 +125,9 @@ async def send_test(bot: Bot, ev: Event):
         try:
             async with timeout(60):
                 user_answer = ''
-                answer_hint = f'你选择的是 {user_answer}' if user_answer else ''
+                answer_hint = (
+                    f'你选择的是 {user_answer}' if user_answer else ''
+                )
                 answers = {a.detail: a for a in start.answer}
                 all_answers = [
                     f'✅选{string.ascii_letters.upper()[index]}: {a}'
@@ -167,7 +171,9 @@ async def send_test(bot: Bot, ev: Event):
                                     _user_percent = percent
 
                         if _user_answer is None:
-                            await bot.send('你的回答不在选项中噢...请重新回答!')
+                            await bot.send(
+                                '你的回答不在选项中噢...请重新回答!'
+                            )
                             continue
                         else:
                             user_answer = _user_answer

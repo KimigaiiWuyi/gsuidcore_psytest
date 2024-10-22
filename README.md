@@ -3,11 +3,12 @@
 <p align="center">
   <a href="https://github.com/KimigaiiWuyi/gsuidcore_psytest"><img src="https://s2.loli.net/2023/10/05/GHjJNWBP4nezgIU.png" width="256" height="256" alt="gsuidcore_psytest"></a>
 </p>
-<h1 align = "center">Psytest 0.1</h1>
+<h1 align = "center">Psytest 0.0.2</h1>
 <h4 align = "center">🚧支持OneBot(QQ)、QQ频道、微信、开黑啦、Telegram的心理测试集合插件🚧</h4>
 <div align = "center">
         <a href="http://docs.gsuid.gbots.work/#/" target="_blank">安装文档</a>
 </div>
+
 
 
 

@@ -23,7 +23,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "gsuidcore_psytest"
-version = "0.0.1"
+version = "0.0.2"
 description = "基于gsuid-core, 支持NoneBot2 & HoshinoBot & ZeroBot & YunzaiBot的心理测试Bot插件"
 authors = ["KimigaiiWuyi <444835641@qq.com>"]
 license = "GPL-3.0-or-later"
@@ -57,3 +57,6 @@ pycln = "^2.1.2"
 nonebug = "^0.3.0"
 pytest = "^7.2.0"
 pytest-asyncio = "^0.20.3"
+
+[tool.basedpyright]
+deprecateTypingAliases = false
